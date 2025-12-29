@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-dark-olive: rgb(13, 13, 7);
+  --color-dark-gray: rgb(21, 21, 16);
+  --color-main-color: rgb(24, 24, 18);
+  --color-borders: rgb(41, 41, 32);
+  --color-secondary-gray: rgb(42, 42, 33);
+  --color-main-yellow: rgb(252, 243,66)
+}
+
+@theme {
+  --animate-spin: spin 4s linear infinite;
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;     /* IE & Edge */
+    scrollbar-width: none;        /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;                /* Chrome, Safari */
+  }
+}
