@@ -17,6 +17,7 @@ export default function useGame() {
 
   const socket = io(import.meta.env.VITE_SOCKET_SERVER_URL, {
     autoConnect: false,
+    path: import.meta.env.VITE_SOCKET_PATH,
   })
 
   const joinParty = (teamName, partyId) => {
